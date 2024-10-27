@@ -1,0 +1,70 @@
+body{
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+    }
+    
+.pb-6, .py-6 {
+    margin-bottom: 100px;
+    font-family: "Poppins", sans-serif;
+}
+.pt-6, .py-6 {
+    margin-top: 100px;
+}
+
+.card {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .4rem;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.card-body-1,
+.card-body-2,
+.card-body-3,
+.card-body-4 {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.btn-back-home {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    background: #C04C43;
+    box-shadow: 3px 3px 3px #868181;
+    margin-left: -1100px;
+    text-decoration: none;
+    }
+      
+.btn-back-home:hover {
+    background: #545353;
+    color: #fff;
+    }
+
+    .card-body-1 i,
+    .card-body-2 i,
+    .card-body-3 i,
+    .card-body-4 i {
+        color: #C04C43;
+        font-size: 28px;
+      }
+
+@media (max-width: 991px) {
+    .btn-back-home{
+    margin-left: 0px; 
+    font-weight: 400;
+    font-size: 15px;
+    }
+
+}

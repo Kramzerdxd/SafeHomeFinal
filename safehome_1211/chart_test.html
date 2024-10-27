@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Data Line Charts</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Include Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/css/ionicons.min.css">
+</head>
+<body>
+<!-- Custom element definition for Ionicons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/ionicons.js"></script>
+
+    <div style="width: 40%">
+        <canvas id="gasChart" width="200" height="100"></canvas>
+        <button onclick="fetchDataAndUpdateChart('Gas Sensor')"><ion-icon name="reload-outline"></ion-icon></button>
+    </div>
+    <div style="width: 40%">
+        <canvas id="smokeChart" width="400" height="200"></canvas>
+        <button onclick="fetchDataAndUpdateChart('Smoke Sensor')"><ion-icon name="reload-outline"></ion-icon></button>
+    </div>
+    <div style="width: 40%">
+        <canvas id="waterChart" width="400" height="200"></canvas>
+        <button onclick="fetchDataAndUpdateChart('Water Sensor')"><ion-icon name="reload-outline"></ion-icon></button>
+    </div>
+
+<!--------------------------------------------------------------------JAVASCRIPT FOR CHART.JS-------------------------------------------------------------------------->
+    <script>
+
+      // Global variable to store the chart instances
+    let gasChartInstance;
+    let smokeChartInstance;
+    let waterChartInstance;
+
+    let gasDataIndex = 0;
+    let smokeDataIndex = 0;
+    let waterDataIndex = 0; 
+
+    let sensorData = [];
+
+    let gasData = [];
+    let gasDataFetched = 0;
+    let smokeDataFetched = 0;
+    let waterDataFetched = 0;
+
+    let wValue;
+
+        // Function to fetch JSON data
+        function fetchData() {
+            return fetch('data2.json')
+                .then(response => response.json());
+
+                console.log(response);
+        }
+
+// Function to update the chart for a specific sensor //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function updateChart(sensorLabel) {
+    // Get data for the specific sensor
+    const sensorDataPoints = sensorData.filter(entry => entry.label === sensorLabel);
+
+    // Get the 5 latest data points
+    const latestData = sensorDataPoints.slice(-5);
+
+    const labels = latestData.map(entry => formatTimestamp(entry.timestamp)); 
+    const values = latestData.map(entry => entry.value);
+
+    // Separate 'Values' variable for WATER SENSOR CHART
+    const wValues = latestData.map(entry => getValueFromLabel(entry.value));
+
+    // Get the appropriate chart instance based on the sensor label
+    let chartInstance;
+    if (sensorLabel === 'Gas Sensor') {
+        chartInstance = gasChartInstance;
+    } else if (sensorLabel === 'Smoke Sensor') {
+        chartInstance = smokeChartInstance;
+    } else if (sensorLabel === 'Water Sensor') {
+        chartInstance = waterChartInstance;
+    }
+
+    // Previous Chart Instance need to be destroyed before replaced(updated) with new one
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+    
+    if(sensorLabel == 'Gas Sensor') { // GAS SENSOR CHART CREATION //////////////////////////////////////////////////////////////////////////////////////////////////////
+    gasChartInstance = new Chart(document.getElementById('gasChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: labels, // 'labels' variable from LINE 64
+            datasets: [{
+                label: sensorLabel,
+                data: values, // 'values' variable from LINE 65
+                borderColor: 'red',
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    suggestedMin: 0, // y-axis Min label
+                    suggestedMax: 100, // y-axis Max label
+                    ticks: {
+                        stepSize: 10, // Set the interval between y-axis ticks
+                    }
+                }
+            }
+        }
+    });
+    } else if(sensorLabel == 'Smoke Sensor') { // SMOKE SENSOR CHART CREATION ///////////////////////////////////////////////////////////////////////////////////////////
+    smokeChartInstance = new Chart(document.getElementById('smokeChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: labels, // 'labels' variable from LINE 64
+            datasets: [{
+                label: sensorLabel,
+                data: values, // 'values' variable from LINE 65
+                borderColor: 'green',
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    suggestedMin: 0, // y-axis Min label
+                    suggestedMax: 500, // y-axis Max label
+                    ticks: {
+                        stepSize: 25, // Set the interval between y-axis ticks
+                    }
+                }
+            }
+        }
+    });
+    } else if(sensorLabel == 'Water Sensor') { // WATER SENSOR CHART CREATION //////////////////////////////////////////////////////////////////////////////////////////
+    waterChartInstance = new Chart(document.getElementById('waterChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: labels, // 'labels' variable from LINE 64
+            datasets: [{
+                label: sensorLabel,
+                data: wValues, // 'values' variable from LINE 68
+                borderColor: 'blue',
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    suggestedMin: 100, // y-axis Min label
+                    suggestedMax:300, // y-axis Max label
+                    ticks: {
+                        stepSize: 100, // Set the interval between y-axis ticks
+                        callback: function (value, index, values) {
+                            if (value === 100) return 'Low';
+                            if (value === 200) return 'Medium';
+                            if (value === 300) return 'High';
+                            return value;
+                        }
+                    }
+                }
+            }
+        }
+    });
+  }
+}
+
+// Function to fetch JSON data and update the chart for a specific sensor //////////////////////////////////////////////////////////////////////////////////////////////
+function fetchDataAndUpdateChart(sensorLabel) {
+    const sensorDataPoints = sensorData.filter(entry => entry.label === sensorLabel);
+
+    fetchData().then(data => {
+        // Update the global sensorData variable with the latest data
+        sensorData = data;
+
+
+        //Check if there are at least 5 data points available for the specific sensor
+        if (getSensorDataIndex(sensorLabel) > sensorDataPoints?.length) {
+            console.log(`There are less than 5 available data points for the ${sensorLabel}.`);
+        } else {
+            // Update the chart for the specific sensor
+            updateChart(sensorLabel);
+        }
+    });
+}
+
+// TIMESTAMP FORMATTING (00:00:00) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function formatTimestamp(timestamp) {
+    const date = new Date(timestamp);
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+}
+
+// WATER LVL VALUE CONVERTION // Called in LINE 68///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function getValueFromLabel(label) {
+    if (label === 'Low') {
+        return 100;
+    } else if (label === 'Medium') {
+        return 200;
+    } else if (label === 'High') {
+        return 300;
+    }
+}
+
+// Helper functions to manage data indices for different sensors////////////////////////////////////////////////////////////////////////////////////////////////////////
+function getSensorDataIndex(sensorLabel) {
+    if (sensorLabel === 'Gas Sensor') {
+        return gasDataIndex;
+    } else if (sensorLabel === 'Smoke Sensor') {
+        return smokeDataIndex;
+    } else if (sensorLabel === 'Water Sensor') {
+        return waterDataIndex;
+    }
+}
+
+// Call the function to initialize the gas chart on page load //////////////////////////////////////////////////////////////////////////////////////////////////////////
+updateChart('Gas Sensor');
+updateChart('Smoke Sensor');
+updateChart('Water Sensor');
+
+// Kapag 'updateChart()'' ang tinawag, empty graph ang ididisplay. Kapag yung 'fetchDataAndUpdateChart()' ang tinawag, chart na may laman from data.json, so kapag walang
+// laman ang json file, walang madidisplay, kahit empty graph wala.
+
+    </script>
+</body>
+</html>

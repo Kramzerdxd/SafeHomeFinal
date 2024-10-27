@@ -1,0 +1,452 @@
+[
+    {
+        "label": "Gas Sensor",
+        "value": 204,
+        "id": "5",
+        "timestamp": "2023-10-30 09:48:55"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 32,
+        "id": "5",
+        "timestamp": "2023-10-30 09:48:55"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "5",
+        "timestamp": "2023-10-30 09:48:55"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 40,
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:17"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 170,
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:17"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:17"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 40,
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:29"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 171,
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:29"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:29"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 40,
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:40"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 172,
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:40"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:11:40"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 177,
+        "id": "10",
+        "timestamp": "2023-11-14 09:12:02"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 176,
+        "id": "10",
+        "timestamp": "2023-11-14 09:12:02"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:12:02"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:12:54"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 178,
+        "id": "10",
+        "timestamp": "2023-11-14 09:12:54"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:12:54"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:13:06"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 178,
+        "id": "10",
+        "timestamp": "2023-11-14 09:13:06"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:13:06"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 40,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:10"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 167,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:10"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:10"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 40,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:22"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 169,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:22"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:22"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:34"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 171,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:34"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:34"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 48,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:46"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 173,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:46"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:46"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 43,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:58"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 174,
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:58"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:19:58"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 54,
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:20"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 176,
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:20"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:20"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 224,
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:42"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 177,
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:42"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:42"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 48,
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:54"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 178,
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:54"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:20:54"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 43,
+        "id": "10",
+        "timestamp": "2023-11-14 09:21:06"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 179,
+        "id": "10",
+        "timestamp": "2023-11-14 09:21:06"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:21:06"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 43,
+        "id": "10",
+        "timestamp": "2023-11-14 09:21:17"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 179,
+        "id": "10",
+        "timestamp": "2023-11-14 09:21:17"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:21:17"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:04"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 182,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:04"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:04"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:16"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 183,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:16"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:16"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:28"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 184,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:28"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:28"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 141,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:50"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 186,
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:50"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:25:50"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 44,
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:02"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 187,
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:02"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:02"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 43,
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:14"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 187,
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:14"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:14"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 41,
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:25"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 188,
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:25"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "Low",
+        "id": "10",
+        "timestamp": "2023-11-14 09:26:25"
+    },
+    {
+        "label": "Gas Sensor",
+        "value": 130,
+        "id": "10",
+        "timestamp": "2023-11-15 09:30:25"
+    },
+    {
+        "label": "Smoke Sensor",
+        "value": 350,
+        "id": "10",
+        "timestamp": "2023-11-15 09:30:25"
+    },
+    {
+        "label": "Water Sensor",
+        "value": "High",
+        "id": "10",
+        "timestamp": "2023-11-15 09:30:25"
+    }
+]

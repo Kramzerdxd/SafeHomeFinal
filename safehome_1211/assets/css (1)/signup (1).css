@@ -1,0 +1,260 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap|League+Spartan:300,300i,400,400i,600,600i,700,700i');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    background: #2E2E2E;
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+   
+  }
+
+
+.card {
+    width: 800px;
+    height: 300px;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px #242424;
+    margin: auto;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f,
+        0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7,
+        -8px -8px 15px #fff;
+        background-color: #2E2E2E;
+}
+
+.card .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.card .form-field input {
+    width: 100%;
+    display: block;
+    border-style: solid;
+    border-color: #3d343468;
+    border-radius: 10px;
+    background: none;
+    font-size: 15px;
+    color: #666;
+    padding: 10px 10px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.card .form-field {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.card .form-field .fas {
+    color: #555;
+}
+
+.card .btn {
+
+    box-shadow: none;
+    width: 100px;
+    height: 40px;
+    background-color: #C04C43;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.card .btn:hover {
+    background-color: #2E2E2E;
+    color: #fff;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4;
+}
+
+.card a:hover {
+    color: #C04C43;
+}
+
+.card p{
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.card .h3{
+    font-size: 13px;
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+.card .h4{
+    font-size: 13px;
+    color: #03A9F4;
+}
+
+.card .h5{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.card .h6:hover {
+    color: #C04C43;
+}
+
+@media(max-width: 600px) {
+    .wrapper {
+        margin: 200px;
+        padding: 40px 30px 30px 30px;
+        max-width: 350px;
+        min-height: 400px;
+        
+    }
+    .wrapper .form-field {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    }
+    .logo {
+        width: 70px;
+        height: 70px;
+        margin: auto;
+    }
+    
+    
+    .logo img {
+        width: 100%;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0px 0px 3px #5f5f5f,
+            0px 0px 0px 5px #ecf0f3,
+            8px 8px 15px #a7aaa7,
+            -8px -8px 15px #fff;
+    }
+
+    .card #geoDiv {
+        width: 95%; 
+        height: 40vh;
+    }
+}
+@media(min-width: 900px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 30px 30px 30px;
+        width: 350px;
+        min-height: 300px;
+    }
+    .wrapper .form-field {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    }
+}
+
+
+
+
+
+
+
+/* hero media */
+
+
+
+@media (max-width: 992px) {
+    #hero {
+      height: calc(100vh - 70px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    #hero {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      position: relative;
+      padding: 0;
+    }
+  
+  }
+
+
+  /* container mb view */
+
+  @media (max-width: 768px) {
+
+    .mb-cotainer {
+      max-height: 47px;
+    }
+}
+
+/* Responsive CSS for mobile devices */
+@media (max-width: 767px) {
+    .card {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      box-shadow: none;
+    }
+  
+    .card .logo {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .card .name {
+      font-size: 1.2rem;
+      padding-left: 0;
+    }
+  
+    .card .form-field input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .card .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .card p {
+      font-size: 0.8rem;
+    }
+  }
